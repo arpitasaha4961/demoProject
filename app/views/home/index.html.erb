@@ -1,0 +1,10 @@
+<h1>Home#index</h1>
+
+<%= link_to 'Sign Up', new_student_registration_path %>
+
+<% if student_signed_in? %>
+
+  <%= link_to 'Sign Out', destroy_student_session_path, method: :delete %>
+<%else %>
+  <%= link_to 'Sign In', new_student_session_path %>
+<%end %>
